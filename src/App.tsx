@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const App = () => {
   const setDateStr  = () => {
@@ -26,7 +26,7 @@ const App = () => {
           </div>
           <div className="content-input-work__button-wrap">
             <button type="button">ほめて</button>
-            <a>あしあと</a>
+            <Link to="list">あしあと</Link>
           </div>
         </div>
       </main>
