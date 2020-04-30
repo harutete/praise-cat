@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const App = () => {
-  const setDateStr  = () => {
+  const setTodayStr  = () => {
     const date = new Date()
     const year = date.getFullYear()
     const month = date.getMonth()
@@ -18,7 +18,7 @@ const App = () => {
         <h1>praise cat</h1>
       </header>
       <main>
-        <h2>{setDateStr()}</h2>
+        <h2>{setTodayStr()}</h2>
         <p>今日がんばったことを書いてね</p>
         <div className="content-input-work">
           <div className="content-input-work__textarea">
