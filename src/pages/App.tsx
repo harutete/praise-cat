@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// components
+import UtilityButton from '../components/atoms/button'
+
 const App = () => {
   const formattedDateStr  = () => {
     const date = new Date()
@@ -25,7 +28,7 @@ const App = () => {
             <textarea></textarea>
           </div>
           <div className="content-input-work__button-wrap">
-            <button type="button">ほめて</button>
+            <UtilityButton text={'ほめて'} />
             <Link to="list">あしあと</Link>
           </div>
         </div>
