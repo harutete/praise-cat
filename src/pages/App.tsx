@@ -1,10 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../components/theme'
+import GlobalStyle from '../components/FoundationStyle'
 // components
+import HeaderContent from '../components/organisms/header'
 import UtilityButton from '../components/atoms/button'
+import Textarea from '../components/atoms/Textarea'
 
-const App = () => {
+const App: React.FC = () => {
   const formattedDateStr  = () => {
     const date = new Date()
     const year = date.getFullYear()
@@ -16,27 +19,28 @@ const App = () => {
     return `${year}/${month}/${day}(${weekDayArr[weekDayIndex]})`
   }
   return (
-    <div className="App">
-      <header>
-        <h1>praise cat</h1>
-      </header>
-      <main>
-        <h2>{formattedDateStr()}</h2>
-        <p>今日がんばったことを書いてね</p>
-        <div className="content-input-work">
-          <div className="content-input-work__textarea">
-            <textarea></textarea>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <div className="App">
+        <HeaderContent />
+        <main>
+          <h2>{formattedDateStr()}</h2>
+          <p>今日がんばったことを書いてね</p>
+          <div className="content-input-work">
+            <div className="content-input-work__textarea">
+              <Textarea />
+            </div>
+            <div className="content-input-work__button-wrap">
+              <UtilityButton isAccent text={'ほめて'} />
+              <UtilityButton isAnchor text={'あしあと'} href="list" />
+            </div>
           </div>
-          <div className="content-input-work__button-wrap">
-            <UtilityButton text={'ほめて'} />
-            <Link to="list">あしあと</Link>
-          </div>
-        </div>
-      </main>
-      <footer>
-        <small>&copy;2020</small>
-      </footer>
-    </div>
+        </main>
+        <footer>
+          <small>&copy;2020</small>
+        </footer>
+      </div>
+    </ThemeProvider>
   );
 }
 

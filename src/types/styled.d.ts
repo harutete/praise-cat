@@ -8,7 +8,8 @@ declare module 'styled-components' {
       textColor: string,
       main: string,
       secondary: string,
-      accent: string
+      accent: string,
+      white: string
     }
   }
 }

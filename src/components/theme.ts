@@ -5,7 +5,8 @@ export const theme = {
     textColor: '#333333',
     main: '#9DDCDC',
     secondary: '#FFEBB7',
-    accent: '#E67A7A'
+    accent: '#E67A7A',
+    white: '#FFFFFF'
   }
 } as const
 
