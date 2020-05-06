@@ -2,6 +2,7 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../components/theme'
 // components
+import GlobalStyle from '../components/FoundationStyle'
 import HeaderContent from '../components/organisms/header'
 import UtilityButton from '../components/atoms/button'
 import Textarea from '../components/atoms/Textarea'
@@ -19,6 +20,7 @@ const App: React.FC = () => {
   }
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <div className="App">
         <HeaderContent />
         <main>
