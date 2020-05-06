@@ -2,10 +2,7 @@ import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Kosugi Maru';
-    src: url(../../../assets/fonts/KosugiMaru-Regular.ttf)
-  }
+  @import url('https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap&subset=japanese');
   :root {
     font-size: 62.5%;
   }

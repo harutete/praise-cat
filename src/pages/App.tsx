@@ -1,7 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../components/theme'
-import GlobalStyle from '../components/FoundationStyle'
 // components
 import HeaderContent from '../components/organisms/header'
 import UtilityButton from '../components/atoms/button'
@@ -20,7 +19,6 @@ const App: React.FC = () => {
   }
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
       <div className="App">
         <HeaderContent />
         <main>
