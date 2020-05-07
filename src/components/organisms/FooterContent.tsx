@@ -5,8 +5,10 @@ const FooterContent = () => {
   const Footer = styled.footer`
     background: ${props => props.theme.colors.main};
     border-bottom: 1px solid ${props => props.theme.colors.main};
+    text-align: center;
   `
   const Copyright = styled.small`
+    color: ${props => props.theme.colors.white};
     font-size: 1rem;
   `
 
