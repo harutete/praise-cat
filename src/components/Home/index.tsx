@@ -26,7 +26,7 @@ const Home = () => {
           <Textarea />
         </div>
         <div className="content-input-work__button-wrap">
-          <UtilityButton isAccent text={'ほめて'} />
+          <UtilityButton isAccent isAnchor text={'ほめて'} href="result" />
           <UtilityButton isAnchor text={'あしあと'} href="list" />
         </div>
       </div>
