@@ -18,6 +18,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Kosugi Maru', sans-serif;
     font-size: 1.5rem;
   }
+  .App {
+    height: 100vh;
+  }
 `
 
 export default GlobalStyle

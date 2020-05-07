@@ -5,7 +5,7 @@ import Heading01 from '../atoms/Heading01'
 const HeaderContent = () => {
   const Header = styled.header`
     background: ${props => props.theme.colors.main};
-    border-bottom: 1px solid ${props => props.theme.colors.main};
+    padding: 5px;
   `
   const Heading = styled(Heading01)`
     color: ${props => props.theme.colors.white};
