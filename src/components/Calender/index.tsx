@@ -68,7 +68,7 @@ const Calender = () => {
   const weekDayArr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
   return (
-    <div>
+    <>
       <Heading02 text="がんばった一覧" />
       <table>
         <caption>{currentDate}</caption>
@@ -93,7 +93,7 @@ const Calender = () => {
           <button type="button" onClick={reRenderCalender} data-pagenation="next">Next</button>
         </li>
       </ul>
-    </div>
+    </>
   )
 }
 
