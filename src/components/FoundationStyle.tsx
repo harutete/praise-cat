@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Kosugi Maru', sans-serif;
     font-size: 1.5rem;
   }
+  img {
+    vertical-align: bottom;
+    max-width: 100%;
+  }
   .App {
     min-height: 100vh;
     height: 100%;
