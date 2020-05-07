@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const MainContent = ({ children, ...props }: any) => {
-  const Main = styled.div`
+  const Main = styled.main`
     flex: 1 0 auto;
   `
 

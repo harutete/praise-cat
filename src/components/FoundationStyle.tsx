@@ -19,7 +19,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.5rem;
   }
   .App {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
   }
 `
 
