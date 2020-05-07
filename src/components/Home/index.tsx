@@ -18,7 +18,7 @@ const Home = () => {
     return `${year}/${month}/${day}(${weekDayArr[weekDayIndex]})`
   }
   return (
-    <div>
+    <>
       <Heading02 text={formattedDateStr()} />
       <p>今日がんばったことを書いてね</p>
       <div className="content-input-work">
@@ -30,7 +30,7 @@ const Home = () => {
           <UtilityButton isAnchor text={'あしあと'} href="list" />
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
