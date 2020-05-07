@@ -2,7 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const UtilityButton = (props: { text: string, isAccent?: boolean, isAnchor?: boolean, href?: string }) => {
+type Props = {
+  text: string,
+  isAccent?: boolean,
+  isAnchor?: boolean,
+  href?: string,
+  className?: string
+}
+
+const UtilityButton: React.FC<Props> = (props) => {
   const fixHref = props.href || ''
   const Button = styled.button`
     cursor: pointer;
