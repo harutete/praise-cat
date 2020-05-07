@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 //Component
-import Heading02 from '../atoms/Heading02'
+import Heading02 from '../common/atoms/Heading02'
 
 const Calender = () => {
   const fetchCurrentDate = () => {

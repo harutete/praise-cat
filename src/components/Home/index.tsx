@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 //Component
-import Heading02 from '../atoms/Heading02'
-import UtilityButton from '../atoms/button'
-import Textarea from '../atoms/Textarea'
+import Heading02 from '../common/atoms/Heading02'
+import UtilityButton from '../common/atoms/button'
+import Textarea from '../common/atoms/Textarea'
 
 const Home = () => {
   const formattedDateStr  = () => {

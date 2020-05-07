@@ -4,12 +4,12 @@ import { theme } from '../components/theme'
 import { Route, Switch } from "react-router"
 // components
 import GlobalStyle from '../components/FoundationStyle'
-import HeaderContent from '../components/organisms/HeaderContent'
-import FooterContent from '../components/organisms/FooterContent'
+import HeaderContent from '../components/common/organisms/HeaderContent'
+import FooterContent from '../components/common/organisms/FooterContent'
 import Calender from '../components/Calender'
 import Home from '../components/Home'
-import ContentWrapper from '../components/atoms/ContentWrapper'
-import MainContent from '../components/atoms/MainContent'
+import ContentWrapper from '../components/common/atoms/ContentWrapper'
+import MainContent from '../components/common/atoms/MainContent'
 
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
