@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 //Component
 import Heading02 from '../common/atoms/Heading02'
+import CalenderTable from './CalenderTable'
 
 const Calender = () => {
   const fetchCurrentDate = () => {
@@ -70,21 +71,11 @@ const Calender = () => {
   return (
     <>
       <Heading02 text="がんばった一覧" />
-      <table>
-        <caption>{currentDate}</caption>
-        <thead>
-          <tr>
-            {weekDayArr.map((day, index) => <th key={`weekday_${index}`}>{day}</th>)}
-          </tr>
-        </thead>
-        <tbody>
-          {calender.map((week, index) =>
-            <tr key={`week_${index}`}>
-              {week.map((day, index) => <td key={`day_${index}`}>{day}</td>)}
-            </tr>
-          )}
-        </tbody>
-      </table>
+      <CalenderTable
+        currentDate={currentDate}
+        weekDayArr={weekDayArr}
+        calenderDate={calender}
+      />
       <ul>
         <li>
           <button type="button" onClick={reRenderCalender} data-pagenation="prev">Prev</button>
