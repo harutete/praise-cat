@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import UtilityButton from '../common/atoms/Button'
+import UtilityButton from '../common/atoms/UtilityButton'
 
 const PagenationButton: React.FC = (props) => {
   const List = styled.ul`

@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 
 //Component
 import Heading02 from '../common/atoms/Heading02'
-import UtilityButton from '../common/atoms/Button'
+import UtilityButton from '../common/atoms/UtilityButton'
 import Textarea from '../common/atoms/Textarea'
 
 const Home = () => {
