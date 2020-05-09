@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 //Component
 import Heading02 from '../common/atoms/Heading02'
-import UtilityButton from '../common/atoms/button'
+import UtilityButton from '../common/atoms/Button'
 import Textarea from '../common/atoms/Textarea'
 
 const Home = () => {

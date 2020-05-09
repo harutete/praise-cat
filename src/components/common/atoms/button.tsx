@@ -29,8 +29,8 @@ const UtilityButton: React.FC<Props> = (props) => {
   `
   return (
     props.isAnchor
-      ? <FixAnchorButton to={fixHref}>{props.text}</FixAnchorButton>
-      : <Button type="button">{props.text}</Button>
+      ? <FixAnchorButton {...props} to={fixHref}>{props.text}</FixAnchorButton>
+      : <Button {...props} type="button">{props.text}</Button>
   )
 }
 
