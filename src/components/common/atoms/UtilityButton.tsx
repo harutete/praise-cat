@@ -13,6 +13,7 @@ type Props = {
 const UtilityButton: React.FC<Props> = (props) => {
   const fixHref = props.href || ''
   const Button = styled.button`
+    display: inline-block;
     cursor: pointer;
     background: ${props.isAccent ? '#BEEBE9' : '#EEEEEE'};
     border: none;
