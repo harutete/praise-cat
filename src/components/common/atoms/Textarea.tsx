@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const Textarea = () => {
   const [ isEmpty, setIsEmpty ] = useState(false)
   const checkValidation = (event: any) => {
-    !!event.target.value.length ? setIsEmpty(true) : setIsEmpty(false)
-    console.log({isEmpty})
+    const value = event.target.value
+    !!value.length ? setIsEmpty(false) : setIsEmpty(true)
   }
   const UtilityTextarea = styled.textarea`
     border: 1px solid #EEEEEE;
@@ -13,9 +13,15 @@ const Textarea = () => {
     max-width: 100%;
     padding: 5px;
   `
+  const CautionText = styled.p`
+    color: ${props => props.theme.colors.accent}
+  `
 
   return (
-    <UtilityTextarea onBlur={checkValidation} />
+    <>
+      <UtilityTextarea onBlur={checkValidation}/>
+      { isEmpty && <CautionText>*テキストを入力してください</CautionText>}
+    </>
   )
 }
 
