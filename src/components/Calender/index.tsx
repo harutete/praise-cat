@@ -4,6 +4,7 @@ import styled from 'styled-components'
 //Component
 import Heading02 from '../common/atoms/Heading02'
 import CalenderTable from './CalenderTable'
+import PagenationButton from './PagenationButton'
 
 const Calender = () => {
   const fetchCurrentDate = () => {
@@ -76,14 +77,7 @@ const Calender = () => {
         weekDayArr={weekDayArr}
         calenderDate={calender}
       />
-      <ul>
-        <li>
-          <button type="button" onClick={reRenderCalender} data-pagenation="prev">Prev</button>
-        </li>
-        <li>
-          <button type="button" onClick={reRenderCalender} data-pagenation="next">Next</button>
-        </li>
-      </ul>
+      <PagenationButton />
     </>
   )
 }
