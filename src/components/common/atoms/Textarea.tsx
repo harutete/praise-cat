@@ -15,7 +15,7 @@ const Textarea = () => {
   `
 
   return (
-    <UtilityTextarea onFocus={checkValidation} onBlur={checkValidation} />
+    <UtilityTextarea onBlur={checkValidation} />
   )
 }
 

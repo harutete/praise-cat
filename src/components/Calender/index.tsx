@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 
 //Component
 import Heading02 from '../common/atoms/Heading02'
