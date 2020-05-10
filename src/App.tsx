@@ -12,28 +12,39 @@ import Home from './components/Home'
 import ContentWrapper from './components/common/atoms/ContentWrapper'
 import MainContent from './components/common/atoms/MainContent'
 
+const initialState = {
+  user: '',
+  events: []
+}
+const userDataContext = React.createContext({
+  user: '',
+  events: []
+})
+
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
-    <div className="App">
-      <ContentWrapper>
-        <HeaderContent />
-        <MainContent>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/list">
-              <Calender />
-            </Route>
-            <Route path="/result">
-              <Result />
-            </Route>
-          </Switch>
-        </MainContent>
-        <FooterContent />
-      </ContentWrapper>
-    </div>
+    <userDataContext.Provider value={initialState}>
+      <div className="App">
+        <ContentWrapper>
+          <HeaderContent />
+          <MainContent>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/list">
+                <Calender />
+              </Route>
+              <Route path="/result">
+                <Result />
+              </Route>
+            </Switch>
+          </MainContent>
+          <FooterContent />
+        </ContentWrapper>
+      </div>
+    </userDataContext.Provider>
   </ThemeProvider>
 )
 
