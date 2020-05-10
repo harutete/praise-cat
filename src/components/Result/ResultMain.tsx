@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import img01 from '../../assets/img/praize_01.png'
 import img02 from '../../assets/img/praize_02.png'
 import img03 from '../../assets/img/praize_03.png'
