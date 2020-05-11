@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-
+import React from 'react'
 //Component
 import Heading02 from '../common/atoms/Heading02'
-import UtilityButton from '../common/atoms/UtilityButton'
 import Textarea from '../common/atoms/Textarea'
+import ButtonList from './ButtonList'
 
 const Home = () => {
   const formattedDateStr  = () => {
@@ -24,10 +23,7 @@ const Home = () => {
         <div className="content-input-work__textarea">
           <Textarea />
         </div>
-        <div className="content-input-work__button-wrap">
-          <UtilityButton isAccent isAnchor text={'ほめて'} href="result" />
-          <UtilityButton isAnchor text={'あしあと'} href="list" />
-        </div>
+        <ButtonList />
       </div>
     </>
   )
