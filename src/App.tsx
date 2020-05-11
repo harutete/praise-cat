@@ -16,7 +16,7 @@ const initialState = {
   user: '',
   events: []
 }
-const userDataContext = React.createContext({
+export const userDataContext = React.createContext({
   user: '',
   events: []
 })
