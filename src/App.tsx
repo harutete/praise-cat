@@ -28,12 +28,9 @@ export const eventContext = React.createContext<UseDataContextType>({
 
 // FIXME context切り分ける
 const App: React.FC = () => {
-  const [ user, setUser ] = useState('')
+  // TODO Firebase入れるときに復活させる
+  // const [ user, setUser ] = useState('')
   const [ events, setEvents ] = useState<EventType[] | []>([])
-  const handleClick = (value: string, date?: string) => {
-    const currentDate = date ? new Date(date) : new Date()
-    setEvents([...events, ])
-  }
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
