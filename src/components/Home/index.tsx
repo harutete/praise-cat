@@ -25,7 +25,7 @@ const Home = withRouter((props) => {
     if (value === '') return
     const date = new Date()
     const year = date.getFullYear()
-    const month = date.getMonth()
+    const month = date.getMonth() + 1
     const day = date.getDate()
     const eventsArr = [...events]
     const findCurrentData = eventsArr.find(event => event.day === `${year}/${month}/${day}`)
