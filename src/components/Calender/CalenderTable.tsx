@@ -12,6 +12,7 @@ const CalenderTable: React.FC<Props> = (props) => {
   const Table = styled.table`
     border-collapse : collapse;
     border-spacing: 0;
+    table-layout: fixed;
     width: 100%;
     caption {
       font-size: 1.8rem;
@@ -26,6 +27,7 @@ const CalenderTable: React.FC<Props> = (props) => {
     }
     tbody {
       td {
+        vertical-align: top;
         border: 1px solid #DDDDDD;
         text-align: center;
         padding: 10px;

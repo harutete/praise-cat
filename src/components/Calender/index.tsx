@@ -67,6 +67,7 @@ const Calender = () => {
   const [ calender, setCalendar ] = useState(currentCalendar)
   const reRenderCalender = (event: any) => {
     const state = event.target.getAttribute('data-pagenation')
+    console.log(state)
     const dateArr = currentDate.split('/').map(date => parseInt(date, 10))
     if (state === 'prev') {
       const year = dateArr[1] === 1 ? dateArr[0] -1 : dateArr[0]
@@ -92,7 +93,7 @@ const Calender = () => {
         weekDayArr={weekDayArr}
         calenderDate={calender}
       />
-      <PagenationButton />
+      <PagenationButton onClick={reRenderCalender} />
     </>
   )
 }
