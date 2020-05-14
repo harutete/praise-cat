@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-
+import { detailDataType } from './index'
 type Props = {
   currentDate: string,
   weekDayArr: string[],
-  calenderDate: (number | string)[][]
+  calenderDate: (string | detailDataType)[][]
 }
+
 const CalenderTable: React.FC<Props> = (props) => {
-  const count = 1
+  console.log(props.calenderDate)
   const Table = styled.table`
     border-collapse : collapse;
     border-spacing: 0;
@@ -70,18 +71,18 @@ const CalenderTable: React.FC<Props> = (props) => {
           <tr key={`week_${index}`}>
             {week.map((day, index) =>
               <td key={`day_${index}`}>
-                { typeof day === 'number' &&
+                { typeof day === 'object' &&
                   <>
-                    <p className="text-day">{day}</p>
-                    { count > 0 &&
+                    <p className="text-day">{day.day}</p>
+                    { day.description.length > 0 &&
                       <p className={`
                         text-count
-                        ${count < 3 ? 'text-count--stage-01' :
-                          count > 3 && count < 6 ? 'text-count--stage-02' :
-                          'text-count--stage-03'
+                        ${day.description.length > 5 ? 'text-count--stage-03' :
+                        day.description.length >= 3 && day.description.length <= 5 ? 'text-count--stage-02' :
+                          'text-count--stage-01'
                         }
                       `}>
-                        <span>{count}</span>
+                        <span>{day.description.length}</span>
                       </p>
                     }
                   </>

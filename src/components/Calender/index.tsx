@@ -1,11 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { eventContext } from '../../App'
 
 //Component
 import Heading02 from '../common/atoms/Heading02'
 import CalenderTable from './CalenderTable'
 import PagenationButton from './PagenationButton'
 
+export type detailDataType = {
+  day: number,
+  description: string[]
+}
+
 const Calender = () => {
+  const { events } = useContext(eventContext)
   const fetchCurrentDate = () => {
     const date = new Date()
     const year = date.getFullYear()
@@ -13,7 +20,7 @@ const Calender = () => {
 
     return `${year}/${month}`
   }
-  const drawingCalendar = (year?: number, month?: number): (string | number)[][] => {
+  const drawingCalendar = (year?: number, month?: number): (string | detailDataType)[][] => {
     const date = new Date()
     const currentYear = year || date.getFullYear()
     const currentMonth = month ? month - 1 : date.getMonth()
@@ -35,7 +42,16 @@ const Calender = () => {
           weekArr.push('')
           day++
         } else {
-          weekArr.push(day)
+          const currentDayData = events.find(event => {
+            const currentDay = event.day.split('/')
+            return parseInt(currentDay[2], 10) === day
+          })
+          weekArr.push({
+            day: day,
+            description: currentDayData ?
+              [...currentDayData.descriptions] :
+              []
+          })
           day++
         }
       }
