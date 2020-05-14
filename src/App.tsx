@@ -14,12 +14,12 @@ import MainContent from './components/common/atoms/MainContent'
 
 type EventType = {
   day: string,
-  descriptions: string[] | []
+  descriptions: string[]
 }
 
 type UseDataContextType = {
   events: EventType[] | [],
-  setEvents: (events: EventType[] | []) => void
+  setEvents: (events: EventType[]) => void
 }
 export const eventContext = React.createContext<UseDataContextType>({
   events: [],
