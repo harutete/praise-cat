@@ -15,7 +15,7 @@ const ButtonList = () => {
   return (
     <List>
       <li>
-        <UtilityButton isAccent isAnchor text={'ほめて'} href="result" />
+        <UtilityButton isAccent text={'ほめて'} type="submit" />
       </li>
       <li>
         <UtilityButton isAnchor text={'あしあと'} href="list" />

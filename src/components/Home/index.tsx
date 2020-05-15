@@ -54,9 +54,8 @@ const Home = withRouter((props) => {
       <div className="content-input-work">
         <form onSubmit={addDescription}>
           <Textarea />
-          <button type='submit'>ほめて</button>
+          <ButtonList />
         </form>
-          {/* <ButtonList onClick={addDescription} /> */}
       </div>
     </>
   )

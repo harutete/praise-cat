@@ -7,6 +7,7 @@ type Props = {
   isAccent?: boolean,
   isAnchor?: boolean,
   href?: string,
+  type?: "button" | "submit" | "reset" | undefined
   className?: string
 }
 
@@ -31,7 +32,7 @@ const UtilityButton: React.FC<Props> = (props) => {
   return (
     props.isAnchor
       ? <FixAnchorButton className={props.className} to={fixHref}>{props.text}</FixAnchorButton>
-      : <Button className={props.className} type="button">{props.text}</Button>
+      : <Button {...props} className={props.className} type={props.type ? props.type : 'button'}>{props.text}</Button>
   )
 }
 
