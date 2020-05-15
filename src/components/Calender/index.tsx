@@ -92,7 +92,7 @@ const Calender = () => {
   }
   return (
     <>
-      <CalendarHeading text="がんばった一覧" />
+      <CalendarHeading text="あしあと" />
       <CalenderTable
         currentDate={currentDate}
         weekDayArr={weekDayArr}
