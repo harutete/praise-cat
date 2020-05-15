@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
 import { eventContext } from '../../App'
-import { HeadingProps } from '../common/atoms/Heading02'
 //Component
-import Heading02 from '../common/atoms/Heading02'
+import Heading02, { HeadingProps } from '../common/atoms/Heading02'
 import CalenderTable from './CalenderTable'
 import PagenationButton from './PagenationButton'
 

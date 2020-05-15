@@ -1,10 +1,9 @@
 import React, { useContext, Children } from 'react'
 import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
-import { HeadingProps } from '../common/atoms/Heading02'
 import { eventContext } from '../../App'
 //Component
-import Heading02 from '../common/atoms/Heading02'
+import Heading02, { HeadingProps } from '../common/atoms/Heading02'
 import Textarea from '../common/atoms/Textarea'
 import ButtonList from './ButtonList'
 
