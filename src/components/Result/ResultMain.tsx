@@ -19,7 +19,6 @@ const Result = () => {
     const today = `${year}/${month}/${day}`
     const todayEvents = events.filter(event => event.day === today)
     const eventCount = todayEvents.length ? todayEvents[0].descriptions.length : 0
-    console.log({eventCount})
     if (eventCount > 5) {
       return {
         text: '神',
