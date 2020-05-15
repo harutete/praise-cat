@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
 import { eventContext } from '../../App'
-
+import { HeadingProps } from '../common/atoms/Heading02'
 //Component
 import Heading02 from '../common/atoms/Heading02'
 import CalenderTable from './CalenderTable'
@@ -84,10 +84,6 @@ const Calender = () => {
     }
   }
   const weekDayArr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-  type HeadingProps = {
-    text: string,
-    className?: string
-  }
   const CalendarHeading: React.FC<HeadingProps> = (props) => {
     const Heading = styled(Heading02)`
       text-align: center;

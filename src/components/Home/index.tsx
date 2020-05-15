@@ -1,5 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, Children } from 'react'
 import { withRouter } from 'react-router-dom'
+import styled from 'styled-components'
+import { HeadingProps } from '../common/atoms/Heading02'
 import { eventContext } from '../../App'
 //Component
 import Heading02 from '../common/atoms/Heading02'
@@ -47,16 +49,35 @@ const Home = withRouter((props) => {
 
     props.history.push('/result')
   }
+  const DateHeading: React.FC<HeadingProps> = (props) => {
+    const Heading = styled(Heading02)`
+      text-align: center;
+      margin-top: 20px;
+    `
+    return <Heading text={props.text}/>
+  }
+  const FormWrap = ({children}: any) => {
+    const Wrap = styled.div`
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      & > * {
+        margin-top: 20px;
+      }
+    `
+
+    return <Wrap>{children}</Wrap>
+  }
   return (
     <>
-      <Heading02 text={formattedDateStr()} />
-      <p>今日がんばったことを書いてね</p>
-      <div className="content-input-work">
+      <DateHeading text={formattedDateStr()} />
+      <FormWrap>
+        <p>今日がんばったことを書いてね</p>
         <form onSubmit={addDescription}>
           <Textarea />
           <ButtonList />
         </form>
-      </div>
+      </FormWrap>
     </>
   )
 })
