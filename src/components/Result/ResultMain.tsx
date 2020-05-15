@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
+import styled from 'styled-components'
 import { eventContext } from '../../App'
 
 //Component
 import img01 from '../../assets/img/praize_01.png'
 import img02 from '../../assets/img/praize_02.png'
 import img03 from '../../assets/img/praize_03.png'
-import Heading02 from '../common/atoms/Heading02'
-import UtilityButton from '../common/atoms/UtilityButton'
+import Heading02, { HeadingProps } from '../common/atoms/Heading02'
+import ResultButtonList from './ResultButtonList'
 import ResultImage from './ResultImage'
 
 const Result = () => {
@@ -36,13 +37,33 @@ const Result = () => {
       }
     }
   }
+  const ResultHeading: React.FC<HeadingProps> = (props) => {
+    const Heading = styled(Heading02)`
+      text-align: center;
+      margin-top: 20px;
+    `
+    return <Heading text={props.text}/>
+  }
+  const ResultContentWrap = ({children}: any) => {
+    const Wrap = styled.div`
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      & > * {
+        margin-top: 20px;
+      }
+    `
+
+    return <Wrap>{children}</Wrap>
+  }
   return (
     <>
-      <Heading02 text="お疲れ様" />
+      <ResultHeading text="お疲れ様" />
       <ResultImage src={switchImagePath().imagePath} />
-      <p>{switchImagePath().text}</p>
-      <UtilityButton isAccent isAnchor href="/" text="もっとほめて" />
-      <UtilityButton isAnchor href="/list" text="あしあと" />
+      <ResultContentWrap>
+        <p>{switchImagePath().text}</p>
+        <ResultButtonList />
+      </ResultContentWrap>
     </>
   )
 }
