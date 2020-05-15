@@ -10,6 +10,7 @@ const Textarea = () => {
   const UtilityTextarea = styled.textarea`
     border: 1px solid #EEEEEE;
     border-radius: 4px;
+    width: 100%;
     max-width: 100%;
     padding: 5px;
   `

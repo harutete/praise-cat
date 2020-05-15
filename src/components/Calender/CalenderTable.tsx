@@ -46,6 +46,9 @@ const CalenderTable: React.FC<Props> = (props) => {
           width: 50px;
           height: 50px;
           margin: 10px auto 0;
+          &--stage-00 {
+            color: #EEEEEE;
+          }
           &--stage-01 {
             background: ${props => props.theme.colors.main};
           }
@@ -76,17 +79,16 @@ const CalenderTable: React.FC<Props> = (props) => {
                 { typeof day === 'object' &&
                   <>
                     <p className="text-day">{day.day}</p>
-                    { day.description.length > 0 &&
-                      <p className={`
-                        text-count
-                        ${day.description.length > 5 ? 'text-count--stage-03' :
-                        day.description.length >= 3 && day.description.length <= 5 ? 'text-count--stage-02' :
-                          'text-count--stage-01'
-                        }
-                      `}>
-                        <span>{day.description.length}</span>
-                      </p>
-                    }
+                    <p className={`
+                      text-count
+                      ${day.description.length > 5 ? 'text-count--stage-03' :
+                      day.description.length >= 3 && day.description.length <= 5 ? 'text-count--stage-02' :
+                      day.description.length > 0 &&  day.description.length <= 2 ? 'text-count--stage-01' :
+                      'text-count--stage-00'
+                      }
+                    `}>
+                      <span>{day.description.length}</span>
+                    </p>
                   </>
                 }
               </td>)
