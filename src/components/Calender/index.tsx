@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import styled from 'styled-components'
 import { eventContext } from '../../App'
 
 //Component
@@ -67,7 +68,6 @@ const Calender = () => {
   const [ calender, setCalendar ] = useState(currentCalendar)
   const reRenderCalender = (event: any) => {
     const state = event.target.getAttribute('data-pagenation')
-    console.log(state)
     const dateArr = currentDate.split('/').map(date => parseInt(date, 10))
     if (state === 'prev') {
       const year = dateArr[1] === 1 ? dateArr[0] -1 : dateArr[0]
@@ -84,10 +84,20 @@ const Calender = () => {
     }
   }
   const weekDayArr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-
+  type HeadingProps = {
+    text: string,
+    className?: string
+  }
+  const CalendarHeading: React.FC<HeadingProps> = (props) => {
+    const Heading = styled(Heading02)`
+      text-align: center;
+      margin-top: 20px;
+    `
+    return <Heading text={props.text}/>
+  }
   return (
     <>
-      <Heading02 text="がんばった一覧" />
+      <CalendarHeading text="がんばった一覧" />
       <CalenderTable
         currentDate={currentDate}
         weekDayArr={weekDayArr}
