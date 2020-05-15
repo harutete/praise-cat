@@ -27,7 +27,7 @@ const Result = () => {
       }
     }　else if (eventCount >= 3 && eventCount <= 5) {
       return {
-        text: 'やばい',
+        text: '最高すぎる',
         imagePath: img02
       }
     } else {
