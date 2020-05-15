@@ -32,7 +32,7 @@ const CalenderTable: React.FC<Props> = (props) => {
         text-align: center;
         padding: 10px;
         .text-day {
-          color: #CCCCCC;
+          color: #666666;
           font-size: 1.2rem;
         }
         .text-count {
