@@ -15,10 +15,10 @@ const ButtonList = () => {
   return (
     <List>
       <li>
-        <UtilityButton isAccent text={'ほめて'} type="submit" />
+        <UtilityButton isAccent type="submit">ほめて</UtilityButton>
       </li>
       <li>
-        <UtilityButton isAnchor text={'あしあと'} href="list" />
+        <UtilityButton isAnchor href="list">あしあと</UtilityButton>
       </li>
     </List>
   )

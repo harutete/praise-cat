@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 type Props = {
-  text: string,
   isAccent?: boolean,
   isAnchor?: boolean,
   href?: string,
@@ -11,7 +10,7 @@ type Props = {
   className?: string
 }
 
-const UtilityButton: React.FC<Props> = (props) => {
+const UtilityButton: React.FC<Props> = ({ children, ...props }) => {
   const fixHref = props.href || ''
   const Button = styled.button`
     display: inline-block;
@@ -31,8 +30,8 @@ const UtilityButton: React.FC<Props> = (props) => {
   `
   return (
     props.isAnchor
-      ? <FixAnchorButton className={props.className} to={fixHref}>{props.text}</FixAnchorButton>
-      : <Button {...props} className={props.className} type={props.type ? props.type : 'button'}>{props.text}</Button>
+      ? <FixAnchorButton className={props.className} to={fixHref}>{children}</FixAnchorButton>
+      : <Button {...props} className={props.className} type={props.type ? props.type : 'button'}>{children}</Button>
   )
 }
 

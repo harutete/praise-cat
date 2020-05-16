@@ -1,4 +1,4 @@
-import React, { useContext, Children } from 'react'
+import React, { useContext } from 'react'
 import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
 import { eventContext } from '../../App'
