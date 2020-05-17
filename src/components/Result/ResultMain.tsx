@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import { eventContext } from '../../App'
+import { eventContext } from '../../contexts'
 
 //Component
 import img01 from '../../assets/img/praize_01.png'

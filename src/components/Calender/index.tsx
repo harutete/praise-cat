@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
-import { eventContext } from '../../App'
+import { eventContext } from '../../contexts'
 //Component
 import Heading02, { HeadingProps } from '../common/atoms/Heading02'
 import CalenderTable from './CalenderTable'

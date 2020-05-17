@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
-import { eventContext } from '../../App'
+import { eventContext } from '../../contexts'
 //Component
 import Heading02, { HeadingProps } from '../common/atoms/Heading02'
 import Textarea from '../common/atoms/Textarea'

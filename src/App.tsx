@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from './components/theme'
 import { Route, Switch } from "react-router"
+import { eventContext } from './contexts'
 // components
 import GlobalStyle from './components/FoundationStyle'
 import HeaderContent from './components/common/organisms/HeaderContent'
@@ -27,19 +28,10 @@ import MainContent from './components/common/atoms/MainContent'
 //   month: EventDetailType[]
 // }
 
-type EventType = {
+export type EventType = {
   day: string,
   descriptions: string[]
 }
-
-type UseDataContextType = {
-  events: EventType[],
-  setEvents: (events: EventType[]) => void
-}
-export const eventContext = React.createContext<UseDataContextType>({
-  events: [],
-  setEvents: () => undefined
-})
 
 // FIXME context切り分ける
 const App: React.FC = () => {
