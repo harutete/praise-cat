@@ -11,7 +11,7 @@ const Home = withRouter((props) => {
   const formattedDateStr  = () => {
     const date = new Date()
     const year = date.getFullYear()
-    const month = date.getMonth()
+    const month = date.getMonth() + 1
     const day = date.getDate()
     const weekDayArr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
     const weekDayIndex = date.getDay()
