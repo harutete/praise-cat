@@ -18,7 +18,7 @@ const ResultButtonList = () => {
         <UtilityButton isAccent isAnchor href="/">もっとほめて</UtilityButton>
       </li>
       <li>
-        <UtilityButton isAnchor href="list">あしあと</UtilityButton>>
+        <UtilityButton isAnchor href="list">あしあと</UtilityButton>
       </li>
     </List>
   )
