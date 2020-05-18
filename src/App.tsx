@@ -33,7 +33,6 @@ export type EventType = {
   descriptions: string[]
 }
 
-// FIXME context切り分ける
 const App: React.FC = () => {
   // TODO Firebase入れるときに復活させる
   // const [ user, setUser ] = useState('')
