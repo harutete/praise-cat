@@ -1,3 +1,6 @@
+// 全てのファイルがモジュールにしないといけないため意図的に空オブジェクトをexportする
+export {}
+
 const { app, BrowserWindow } = require('electron')
 
 const createWindow = () => {
@@ -9,9 +12,8 @@ const createWindow = () => {
       nodeIntegration: true
     }
   })
-
-  // public/index.html をロード
-  win.loadFile('./public/index.html')
+  // localhost:3000をロード
+  win.loadURL('http://localhost:3000')
   // 開発者ツールを開く
   win.webContents.openDevTools()
 }
