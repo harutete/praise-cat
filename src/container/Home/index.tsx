@@ -1,21 +1,25 @@
 import React, { useContext } from 'react'
-import { withRouter } from 'react-router-dom'
-import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 import { eventContext } from '../../contexts'
 import HomeComponent from '../../components/Home'
 
-const HomeContainer = withRouter((props) => {
-  const formattedDateStr  = () => {
-    const date = new Date()
-    const year = date.getFullYear()
-    const month = date.getMonth() + 1
-    const day = date.getDate()
-    const weekDayArr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-    const weekDayIndex = date.getDay()
+const formattedDateStr  = () => {
+  const date = new Date()
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const weekDayArr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  const weekDayIndex = date.getDay()
 
-    return `${year}/${month}/${day}(${weekDayArr[weekDayIndex]})`
-  }
+  return `${year}/${month}/${day}(${weekDayArr[weekDayIndex]})`
+}
+type Props = {
+  date: string,
+  onSubmit: () => void
+}
+const HomeContainer: React.FC = () => {
   const { events, setEvents } = useContext(eventContext)
+  const history = useHistory()
   const addDescription = (event: any) => {
     event.preventDefault()
     const textareaCollection = event.target.getElementsByTagName('textarea')
@@ -43,11 +47,14 @@ const HomeContainer = withRouter((props) => {
       setEvents(eventsArr)
     }
 
-    props.history.push('/result')
+    history.push('/result')
   }
   return (
-    <HomeComponent />
+    <HomeComponent
+      date={formattedDateStr()}
+      onSubmit={addDescription}
+    />
   )
-})
+}
 
 export default HomeContainer
