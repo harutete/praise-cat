@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   body {
+    background: #FFFFFF;
     color: #333333;
     font-family: 'Kosugi Maru', sans-serif;
     font-size: 1.5rem;

@@ -9,7 +9,7 @@ import HeaderContent from './components/common/organisms/HeaderContent'
 import FooterContent from './components/common/organisms/FooterContent'
 import Calender from './components/Calender'
 import Result from './components/Result'
-import Home from './components/Home'
+import HomeContainer from './container/Home'
 import ContentWrapper from './components/common/atoms/ContentWrapper'
 import MainContent from './components/common/atoms/MainContent'
 
@@ -47,7 +47,7 @@ const App: React.FC = () => {
             <MainContent>
               <Switch>
                 <Route exact path="/">
-                  <Home />
+                  <HomeContainer />
                 </Route>
                 <Route path="/list">
                   <Calender />
