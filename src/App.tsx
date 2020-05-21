@@ -7,9 +7,9 @@ import { eventContext } from './contexts'
 import GlobalStyle from './components/FoundationStyle'
 import HeaderContent from './components/common/organisms/HeaderContent'
 import FooterContent from './components/common/organisms/FooterContent'
-import Calender from './components/Calender'
-import Result from './components/Result'
 import HomeContainer from './containers/Home'
+import CalenderContainer from './containers/Calender'
+import Result from './components/Result'
 import ContentWrapper from './components/common/atoms/ContentWrapper'
 import MainContent from './components/common/atoms/MainContent'
 
@@ -50,7 +50,7 @@ const App: React.FC = () => {
                   <HomeContainer />
                 </Route>
                 <Route path="/list">
-                  <Calender />
+                  <CalenderContainer />
                 </Route>
                 <Route path="/result">
                   <Result />

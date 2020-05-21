@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { detailDataType } from './index'
+import { detailDataType } from '../../containers/Calender/index'
 type Props = {
   currentDate: string,
   weekDayArr: string[],
