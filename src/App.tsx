@@ -9,7 +9,7 @@ import HeaderContent from './components/common/organisms/HeaderContent'
 import FooterContent from './components/common/organisms/FooterContent'
 import HomeContainer from './containers/Home'
 import CalenderContainer from './containers/Calender'
-import Result from './components/Result'
+import ResultComponent from './containers/Result'
 import ContentWrapper from './components/common/atoms/ContentWrapper'
 import MainContent from './components/common/atoms/MainContent'
 
@@ -53,7 +53,7 @@ const App: React.FC = () => {
                   <CalenderContainer />
                 </Route>
                 <Route path="/result">
-                  <Result />
+                  <ResultComponent />
                 </Route>
               </Switch>
             </MainContent>

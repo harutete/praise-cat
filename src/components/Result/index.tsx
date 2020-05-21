@@ -1,10 +1,20 @@
 import React from 'react'
 import ResultMain from './ResultMain'
 
-const Result = () => {
+type Props = {
+  src: string,
+  text: string,
+  alt: string
+}
+
+const ResultComponent: React.FC<Props> = ({src, text, alt}) => {
   return (
-    <ResultMain />
+    <ResultMain
+      src={src}
+      text={text}
+      alt={alt}
+    />
   )
 }
 
-export default Result
+export default ResultComponent
