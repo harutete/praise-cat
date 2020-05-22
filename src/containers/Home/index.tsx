@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import { eventContext } from '../../contexts'
 import HomeComponent from '../../components/Home'
@@ -13,11 +13,12 @@ const formattedDateStr  = () => {
 
   return `${year}/${month}/${day}(${weekDayArr[weekDayIndex]})`
 }
-type Props = {
-  date: string,
-  onSubmit: () => void
-}
 const HomeContainer: React.FC = () => {
+  const [ isEmpty, setIsEmpty ] = useState(false)
+  const checkValidation = (event: any) => {
+    const value = event.target.value
+    !!value.length ? setIsEmpty(false) : setIsEmpty(true)
+  }
   const { events, setEvents } = useContext(eventContext)
   const history = useHistory()
   const addDescription = (event: any) => {
@@ -53,6 +54,8 @@ const HomeContainer: React.FC = () => {
     <HomeComponent
       date={formattedDateStr()}
       onSubmit={addDescription}
+      onBlue={checkValidation}
+      isEmpty={isEmpty}
     />
   )
 }

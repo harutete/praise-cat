@@ -3,7 +3,7 @@ import styled from 'styled-components'
 //Component
 import Textarea from '../common/atoms/Textarea'
 
-const CommentWrapper = () => {
+const CommentWrapper = ({onBlur, isEmpty}: any) => {
   const Wrapper  = styled.div`
     background: ${props => props.theme.colors.main};
     border-radius: 5px;
@@ -14,9 +14,14 @@ const CommentWrapper = () => {
   const ExpantionTextarea = styled(Textarea)`
     border: none;
   `
-
+  const CautionText = styled.p`
+    color: ${props => props.theme.colors.accent}
+  `
   return (
-    <Wrapper><ExpantionTextarea /></Wrapper>
+    <Wrapper>
+      <ExpantionTextarea onBlur={onBlur} />
+      { isEmpty && <CautionText>*テキストを入力してください</CautionText>}
+    </Wrapper>
   )
 }
 
