@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-const Textarea = () => {
+const Textarea = (props: any) => {
   const [ isEmpty, setIsEmpty ] = useState(false)
   const checkValidation = (event: any) => {
     const value = event.target.value
@@ -20,8 +20,8 @@ const Textarea = () => {
 
   return (
     <>
-      <UtilityTextarea onBlur={checkValidation}/>
-      { isEmpty && <CautionText>*テキストを入力してください</CautionText>}
+      <UtilityTextarea {...props} onBlur={props.onBlur}/>
+      {/* { isEmpty && <CautionText>*テキストを入力してください</CautionText>} */}
     </>
   )
 }

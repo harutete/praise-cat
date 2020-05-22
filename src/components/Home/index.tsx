@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 //Component
 import Heading02, { HeadingProps } from '../common/atoms/Heading02'
-import Textarea from '../common/atoms/Textarea'
+import CommentWrapper from './CommentWrapper'
 import ButtonList from './ButtonList'
 
 const HomeComponent = (({ date, onSubmit }: any) => {
@@ -31,7 +31,7 @@ const HomeComponent = (({ date, onSubmit }: any) => {
       <FormWrap>
         <p>今日がんばったことを書いてね</p>
         <form onSubmit={onSubmit}>
-          <Textarea />
+          <CommentWrapper />
           <ButtonList />
         </form>
       </FormWrap>
