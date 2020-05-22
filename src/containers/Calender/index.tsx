@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import styled from 'styled-components'
 import { eventContext } from '../../contexts'
 //Component
 import CalenderComponent from '../../components/Calender'
